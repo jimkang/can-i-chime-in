@@ -1,37 +1,43 @@
 var tragedyModeBlacklist = require('iscool/defaultlists')
   .get('tragedyModeBlacklist');
 
+var badTimesIndicators = require('./bad-times-indicators');
+
+function WordIsInList(list) {
+  return function wordIsInList(word) {
+    return list.indexOf(word) !== -1;
+  }
+}
+
+var isWordInTragedyBlacklist = WordIsInList(tragedyModeBlacklist);
+var isInBadTimesIndicators = WordIsInList(badTimesIndicators);
+
 function CanIChimeIn(createOpts) {
-  var extraWordsToAvoid;
+  var isWordInExtraWords;
 
   if (createOpts) {
-    extraWordsToAvoid = createOpts.extraWordsToAvoid;
+    isWordInExtraWords = WordIsInList(createOpts.extraWordsToAvoid);
   }
 
   function canIChimeIn(text) {
     var words = text.slice().toLowerCase().split(/[ ":.,;!?#]/);
-    var isOK = true;
 
     if (words.some(isWordInTragedyBlacklist)) {
-      isOK = false;
+      return false;
     }
 
-    if (isOK && extraWordsToAvoid && words.some(isWordInExtraWords)) {
-      isOK = false;
+    if (words.some(isInBadTimesIndicators)) {
+      return false;
     }
 
-    return isOK;
-  }
+    if (isWordInExtraWords && words.some(isWordInExtraWords)) {
+      return false;
+    }
 
-  function isWordInExtraWords(word) {
-    return extraWordsToAvoid.indexOf(word) !== -1;
+    return true;
   }
 
   return canIChimeIn;
-}
-
-function isWordInTragedyBlacklist(word) {
-  return tragedyModeBlacklist.indexOf(word) !== -1;
 }
 
 module.exports = CanIChimeIn;
