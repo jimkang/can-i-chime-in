@@ -59,6 +59,10 @@ var testCases = [
     {
       text: 'So much abuse is going on here.',
       expected: false
+    },
+    {
+      text: 'I wish all these trolls would quit harassing me.',
+      expected: false
     }
 ];
 
