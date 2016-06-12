@@ -4,8 +4,10 @@ module.exports = [
   'abusively',
   'abused',
   'abusing',
+  'abuser',
   'harass',
   'harassed',
   'harassment',
-  'harassing' 
+  'harassing',
+  'reeling'
 ];
