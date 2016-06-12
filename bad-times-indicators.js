@@ -9,5 +9,7 @@ module.exports = [
   'harassed',
   'harassment',
   'harassing',
-  'reeling'
+  'reeling',
+  'mourn',
+  'mourning'
 ];
