@@ -11,5 +11,9 @@ module.exports = [
   'harassing',
   'reeling',
   'mourn',
-  'mourning'
+  'mourning',
+  'victim',
+  'victims',
+  'survivor',
+  'survivors'
 ];
