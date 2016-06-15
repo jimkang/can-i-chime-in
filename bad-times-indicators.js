@@ -15,5 +15,11 @@ module.exports = [
   'victim',
   'victims',
   'survivor',
-  'survivors'
+  'survivors',
+  'violence',
+  'shoot',
+  'shooting',
+  'shootings',
+  'shooter',
+  'shooters'
 ];
