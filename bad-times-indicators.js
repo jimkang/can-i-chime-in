@@ -21,5 +21,7 @@ module.exports = [
   'shooting',
   'shootings',
   'shooter',
-  'shooters'
+  'shooters',
+  'sniper',
+  'snipers'
 ];
