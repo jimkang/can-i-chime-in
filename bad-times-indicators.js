@@ -22,11 +22,15 @@ module.exports = [
   'shootings',
   'shooter',
   'shooters',
+  'shootout',
   'sniper',
   'snipers',
   'tragedy',
 
   // Maybe temporary:
   'baton',
-  'rouge'
+  'rouge',
+
+  'bastille',
+  'france'
 ];
