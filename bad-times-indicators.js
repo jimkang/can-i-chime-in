@@ -27,10 +27,12 @@ module.exports = [
   'snipers',
   'tragedy',
 
-  // Maybe temporary:
-  'baton',
-  'rouge',
+  'trump'
 
-  'bastille',
-  'france'
+  // Maybe temporary:
+  // 'baton',
+  // 'rouge',
+
+  // 'bastille',
+  // 'france'
 ];
