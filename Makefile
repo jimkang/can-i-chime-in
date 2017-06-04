@@ -8,5 +8,5 @@ update-iscool:
 	git pull origin master && \
 		npm update --save iscool && \
 		git commit -a -m"Updated iscool." && \
-		npm version patch &&
+		npm version patch && \
 		make pushall
