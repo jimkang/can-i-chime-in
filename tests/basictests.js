@@ -64,10 +64,10 @@ var testCases = [
       text: 'I wish all these trolls would quit harassing me.',
       expected: false
     },
-    {
-      text: '#orlando other words here',
-      expected: false
-    }
+    // {
+    //   text: '#orlando other words here',
+    //   expected: false
+    // }
 ];
 
 testCases.forEach(runTest);

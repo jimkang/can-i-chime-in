@@ -26,13 +26,9 @@ module.exports = [
   'sniper',
   'snipers',
   'tragedy',
-
-  'trump'
-
-  // Maybe temporary:
-  // 'baton',
-  // 'rouge',
-
-  // 'bastille',
-  // 'france'
+  'trump',
+  'chemo',
+  'cancer',
+  'self-harm',
+  'suicide'
 ];
