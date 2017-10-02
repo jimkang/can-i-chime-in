@@ -21,6 +21,6 @@
     "tape": "^3.0.3"
   },
   "dependencies": {
-    "iscool": "^1.1.47"
+    "iscool": "^1.1.50"
   }
 }
