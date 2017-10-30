@@ -30,5 +30,6 @@ module.exports = [
   'chemo',
   'cancer',
   'self-harm',
-  'suicide'
+  'suicide',
+  'underage'
 ];
