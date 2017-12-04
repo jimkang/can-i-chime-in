@@ -1,7 +1,10 @@
+var splitToWords = require('split-to-words');
 var tragedyModeBlacklist = require('iscool/defaultlists')
   .get('tragedyModeBlacklist');
 
 var badTimesIndicators = require('./bad-times-indicators');
+
+var hashtagRegex = /^#/;
 
 function WordIsInList(list) {
   return function wordIsInList(word) {
@@ -20,7 +23,8 @@ function CanIChimeIn(createOpts) {
   }
 
   function canIChimeIn(text) {
-    var words = text.slice().toLowerCase().split(/[ ":.,;!?#]/);
+    var words = splitToWords(text.slice().toLowerCase()).map(removeHashtags);
+    console.log('words', words)
 
     if (words.some(isWordInTragedyBlacklist)) {
       return false;
@@ -38,6 +42,10 @@ function CanIChimeIn(createOpts) {
   }
 
   return canIChimeIn;
+}
+
+function removeHashtags(s) {
+  return s.replace(hashtagRegex, '');
 }
 
 module.exports = CanIChimeIn;
