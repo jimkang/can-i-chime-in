@@ -24,7 +24,6 @@ function CanIChimeIn(createOpts) {
 
   function canIChimeIn(text) {
     var words = splitToWords(text.slice().toLowerCase()).map(removeHashtags);
-    console.log('words', words)
 
     if (words.some(isWordInTragedyBlacklist)) {
       return false;
