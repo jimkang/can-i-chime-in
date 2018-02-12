@@ -10,3 +10,6 @@ update-iscool:
 		git commit -a -m"Updated iscool." && \
 		npm version patch && \
 		make pushall
+
+prettier:
+	prettier --single-quote --write "**/*.js"

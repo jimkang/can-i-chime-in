@@ -2,72 +2,67 @@ var test = require('tape');
 var CanIChimeIn = require('../index');
 
 var testCases = [
-    {
-      text: 'Man, WTF is going in #ferguson',
-      expected: false
+  {
+    text: 'Man, WTF is going in #ferguson',
+    expected: false
+  },
+  {
+    text: 'Man, WTF is going in ferguson',
+    expected: false
+  },
+  {
+    text: 'Ferguson is so sad.',
+    expected: false
+  },
+  {
+    text: 'WTF Fergie is bonkers',
+    expected: true
+  },
+  {
+    text: 'We`re observing genocide in motion.',
+    expected: false
+  },
+  {
+    text: 'My cat just puked!',
+    expected: true
+  },
+  {
+    text: "Let's make a deal.",
+    createOpts: {
+      extraWordsToAvoid: ['moving', 'angularjs']
     },
-    {
-      text: 'Man, WTF is going in ferguson',
-      expected: false
+    expected: true
+  },
+  {
+    text: 'What a terrible crash.',
+    createOpts: {
+      extraWordsToAvoid: ['moving', 'angularjs']
     },
-    {
-      text: 'Ferguson is so sad.',
-      expected: false
+    expected: false
+  },
+  {
+    text: 'Here is another article about AngularJS!',
+    createOpts: {
+      extraWordsToAvoid: ['moving', 'angularjs']
     },
-    {
-      text: 'WTF Fergie is bonkers' ,
-      expected: true
-    },
-    {
-      text: 'We`re observing genocide in motion.',
-      expected: false
-    },
-    {
-      text: 'My cat just puked!',
-      expected: true
-    },
-    {
-      text: 'Let\'s make a deal.',
-      createOpts: {
-        extraWordsToAvoid: [
-          'moving',
-          'angularjs'
-        ]
-      },
-      expected: true
-    },
-    {
-      text: 'What a terrible crash.',
-      createOpts: {
-        extraWordsToAvoid: [
-          'moving',
-          'angularjs'
-        ]
-      },
-      expected: false
-    },
-    {
-      text: 'Here is another article about AngularJS!',
-      createOpts: {
-        extraWordsToAvoid: [
-          'moving',
-          'angularjs'
-        ]
-      },
-      expected: false
-    },
-    {
-      text: 'So much abuse is going on here.',
-      expected: false
-    },
-    {
-      text: 'I wish all these trolls would quit harassing me.',
-      expected: false
-    },
-    // {
-    //   text: '#orlando other words here',
-    //   expected: false
-    // }
+    expected: false
+  },
+  {
+    text: 'So much abuse is going on here.',
+    expected: false
+  },
+  {
+    text: 'I wish all these trolls would quit harassing me.',
+    expected: false
+  },
+  // {
+  //   text: '#orlando other words here',
+  //   expected: false
+  // }
+  {
+    text: 'My grandpa died.',
+    expected: false
+  }
 ];
 
 testCases.forEach(runTest);

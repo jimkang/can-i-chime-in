@@ -1,6 +1,7 @@
 var splitToWords = require('split-to-words');
-var tragedyModeBlacklist = require('iscool/defaultlists')
-  .get('tragedyModeBlacklist');
+var tragedyModeBlacklist = require('iscool/defaultlists').get(
+  'tragedyModeBlacklist'
+);
 
 var badTimesIndicators = require('./bad-times-indicators');
 
@@ -9,7 +10,7 @@ var hashtagRegex = /^#/;
 function WordIsInList(list) {
   return function wordIsInList(word) {
     return list.indexOf(word) !== -1;
-  }
+  };
 }
 
 var isWordInTragedyBlacklist = WordIsInList(tragedyModeBlacklist);
