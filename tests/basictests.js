@@ -62,6 +62,10 @@ var testCases = [
   {
     text: 'My grandpa died.',
     expected: false
+  },
+  {
+    text: 'The news about Kate Spade is dreadful. She left a 13-year old daughter behind! Her husband Andy’s stepfather committed suicide when he and his brothers (Bryan & David- yes, that one) were still kids, too. So much awfulness.',
+    expected: false
   }
 ];
 
