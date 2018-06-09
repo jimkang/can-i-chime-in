@@ -33,5 +33,6 @@ module.exports = [
   'suicide',
   'underage',
   'die',
-  'died'
+  'died',
+  'trauma'
 ];
